@@ -1,0 +1,12 @@
+{
+  "image": "alpine:3.16",
+  "forwardPorts": [20001],
+
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ],
+
+  "postCreateCommand": "sh scripts/setup.sh"
+}

@@ -7,8 +7,8 @@
   "scripts": {
     "build": "npm run clean && tsc -p tsconfig.json",
     "watch": "npm run clean && tsc -w -p tsconfig.json",
-    "clean": "rm -rf ./build",
-    "start": "nodemon ./build/server.js"
+    "clean": "rm -rf build",
+    "start": "nodemon build/server.js"
   },
   "keywords": [],
   "author": "",

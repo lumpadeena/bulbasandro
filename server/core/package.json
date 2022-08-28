@@ -5,8 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "build": "npm run clean && tsc -p tsconfig.json",
-    "watch": "npm run clean && tsc -w -p tsconfig.json",
+    "build": "tsc",
+    "watch": "tsc -w",
     "clean": "rm -rf build",
     "start": "nodemon build/server.js"
   },

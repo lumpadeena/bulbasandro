@@ -1,3 +1,3 @@
 #!/bin/sh
-apt update && \
-apt add bash
+apk update && \
+apk add bash git vim nodejs npm

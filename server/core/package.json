@@ -2,10 +2,12 @@
   "name": "bulbasandro",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "start": "node ./build/index.js"
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "clean": "rm -rf ./build",
+    "start": "node ./build/server.js"
   },
   "keywords": [],
   "author": "",

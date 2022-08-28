@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "npm run clean && tsc -p tsconfig.json",
+    "watch": "npm run clean && tsc -w -p tsconfig.json",
     "clean": "rm -rf ./build",
-    "start": "node ./build/server.js"
+    "start": "nodemon ./build/server.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.7.13",
+    "nodemon": "^2.0.19",
     "typescript": "^4.8.2"
   }
 }

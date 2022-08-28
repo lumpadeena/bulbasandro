@@ -1,22 +1,18 @@
-import fastify from "fastify";
+import BUILDER from "./application.js";
+import CONFIGS from "./configs.js";
 
-import configs from "./configs.js";
-import ping from "./routes/ping.js";
-
-let app = fastify({
+const APPLICATION = BUILDER({
   logger: true,
 });
 
-app.register(ping);
-
-app.listen(
-  { port: configs.server.port },
+APPLICATION.listen(
+  { port: CONFIGS.server.port },
   (error: Error | null, address: string) => {
     if (error) {
       console.error(error);
       process.exit(1);
     }
 
-    console.info(`Bulbasandro's core server is listening at ${address}.`);
+    console.info(`Core is listening at ${address}.`);
   }
 );
